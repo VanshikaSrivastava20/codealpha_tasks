@@ -1,0 +1,124 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #8E1616;
+  padding: 20px;
+}
+h1 {
+  /* text-align: center;
+  margin-bottom: 20px; */
+  color: #F8EEDF ;
+  text-align: left;
+  margin-bottom: 20px;
+  font-family: 'Bodoni MT', 'Didot', 'Didot LT STD', 'Bodoni 72', serif;
+  font-size: 36px;
+  padding-left: 10px;
+}
+.filters {
+    text-align: left;
+  padding-left: 10px;
+  margin-bottom: 20px;
+}
+.filters button {
+  /* margin: 5px;
+  padding: 10px 15px;
+  border: none; */
+  background: #F8EEDF;
+  color: #000000;
+  /* cursor: pointer;
+  transition: background 0.3s ease; */
+
+   margin: 5px 10px 5px 0;
+  padding: 10px 20px;
+  border: none;
+  /* background: #222;
+  color: white; */
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  font-family: 'Playfair Display', 'Bodoni MT', serif;
+  font-size: 16px;
+  border-radius: 5px;
+  letter-spacing: 0.5px;
+}
+.filters button:hover {
+  
+  background: #444;
+  transform: scale(1.05);
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+}
+.image-card {
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.image-card:hover {
+  transform: scale(1.05);
+}
+.image-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: filter 0.3s ease;
+}
+.image-card:hover img {
+  filter: brightness(85%);
+}
+
+/* Lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.8);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.lightbox.active {
+  display: flex;
+}
+.lightbox-img {
+  max-width: 90%;
+  max-height: 80vh;
+  margin: 20px 0;
+}
+.close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.2);
+  border: none;
+  color: white;
+  font-size: 30px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+@media (max-width: 600px) {
+  .lightbox-img {
+    max-width: 95%;
+  }
+}

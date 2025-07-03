@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Image Gallery</h1>
+
+  <!-- Filter Buttons -->
+  <div class="filters">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('nature')">Nature</button>
+    <button onclick="filterImages('city')">City</button>
+    <button onclick="filterImages('people')">People</button>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE1.jpg" alt="Nature"></div>
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY1.jpg" alt="City"></div>
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE1.jpg" alt="People"></div>
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE2.jpg" alt="Nature"></div>
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY2.jpg" alt="City"></div>
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE2.jpg" alt="People"></div>
+
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE3.jpg" alt="Nature"></div>
+
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY3.jpg" alt="City"></div>
+
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE3.jpg" alt="People"></div>
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE4.JPG" alt="Nature"></div>
+
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY4.jpg" alt="City"></div>
+
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE4.jpg" alt="People"></div>
+
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE5.jpg" alt="Nature"></div>
+
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY5.jpg" alt="City"></div>
+
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE5.jpg" alt="People"></div>
+
+    <div class="image-card" data-category="nature"><img src="./IMAGES/NATURE6.jpg" alt="Nature"></div>
+
+    <div class="image-card" data-category="city"><img src="./IMAGES/CITY6.jpg" alt="City"></div>
+
+    <div class="image-card" data-category="people"><img src="./IMAGES/PEOPLE6.jpg" alt="People"></div>
+
+
+
+    
+
+  </div>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="close" onclick="closeLightbox()">&times;</span>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Preview" />
+    <button class="prev" onclick="changeImage(-1)">❮</button>
+    <button class="next" onclick="changeImage(1)">❯</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
